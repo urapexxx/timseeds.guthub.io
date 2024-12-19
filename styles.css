@@ -164,11 +164,14 @@ body {
 }
 
 .hero-image {
-    width: 1000px; /* Увеличиваем ширину изображения */
-    height: 500px;
+    width: 100%; /* Увеличиваем ширину изображения */
+    max-width: 900px;
+    height: auto;
     position: relative;
     overflow: hidden;
-    margin-top: 10%;
+    margin-top: 6%;
+    margin-right: 100px;
+    margin-bottom: 8%;
 }
 
 .hero-image img {
