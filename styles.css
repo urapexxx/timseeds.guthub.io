@@ -135,87 +135,68 @@ body {
 .hero {
     display: flex;
     width: 100%;
-    min-height: calc(100vh - 80px); /* Вычитаем высоту header */
+    min-height: calc(100vh - 80px); /* Высота без учета header */
     margin: 0;
     padding: 0;
     position: relative;
-    overflow: hidden; /* Предотвращаем выход контента за пределы */
+    overflow: hidden; /* Защита от выхода содержимого */
 }
 
 .hero-content {
-    width: 45%; /* Немного уменьшаем ширину контента */
+    width: calc(50% - 110px); /* Учитываем отступы */
     padding: 6rem 8rem; /* Увеличиваем отступы */
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .hero-title {
-    font-size: 3.5rem;
+    font-size: calc(1rem + 2vw); /* Шрифт увеличивается с шириной окна */
     font-weight: bold;
     line-height: 1.2;
-    margin-bottom: 2rem;
+    margin-bottom: 1.25rem;
 }
 
 .hero-text {
     color: rgba(0, 0, 0, 0.7);
-    font-size: 1.2rem;
+    font-size: calc(0.2rem + 1vw); /* Тоже делаем текст адаптивным */
     max-width: 100%;
+    line-height: 1.6;
+    font-weight: 400;
 }
 
 .hero-image {
-    width: 100%; /* Увеличиваем ширину изображения */
-    max-width: 900px;
-    height: auto;
+    flex: 2; /* Адаптивное поведение */
+    max-width: calc(100% - 100px); /* Ширина относительно родителя с учетом отступа */
+    margin-left: auto; /* Сдвиг изображения вправо */
+    margin-right: 100px; /* Отступ от правого края */
     position: relative;
     overflow: hidden;
-    margin-top: 6%;
-    margin-right: 100px;
-    margin-bottom: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
 }
 
 .hero-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 5rem 5rem 5rem 5rem;
+    width: 100%; /* Ширина адаптируется к контейнеру */
+    height: auto; /* Пропорциональное уменьшение */
+    object-fit: cover; /* Заполнение без искажений */
+    border-radius: 2rem; /* Скругленные края */
 }
 
 
-/* Responsive styles */
-@media (max-width: 1200px) {
-    .header {
-        padding: 1rem 4rem;
-    }
 
-    .hero-content {
-        padding: 4rem;
-    }
-}
 
-@media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-    }
-    
-    .hero-content,
-    .hero-image {
-        width: 100%;
-    }
-    
-    .hero-image {
-        height: 50vh;
-    }
-    
-    .hero-image img {
-        border-radius: 0;
-    }
-}
+
 
 .products {
-    padding: 120px 0; /* Увеличиваем отступы сверху и снизу */
+    
     text-align: center;
-    margin-top: 80px;
+    margin-top: 10px;
 }
 
 .products-title {
@@ -320,29 +301,6 @@ body {
     background-color: #006400;
 }
 
-/* Responsive adjustments */
-@media (max-width: 1200px) {
-    .product-cards {
-        padding: 0 20px;
-    }
-}
-
-@media (max-width: 768px) {
-    .products-title {
-        font-size: 2rem;
-    }
-
-    .product-card {
-        width: 100%;
-        max-width: 380px;
-    }
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 body {
     font-family: Arial, sans-serif;
@@ -411,7 +369,7 @@ h1 {
 
 /* Testimonials section */
 .testimonials {
-    padding: 10px 0;
+    padding: 10px 10px;
     text-align: center;
     max-width: 1200px; /* Увеличиваем максимальную ширину */
     margin: 0 auto; /* Центрируем панель */
@@ -423,6 +381,7 @@ h1 {
     margin-bottom: 40px;
     text-align: center;
     color: #333;
+    margin-top: 80px;
 }
 
 .testimonial {
