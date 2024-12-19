@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimSeeds — Семена для вашего сада и огорода</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<script src="https://api-maps.yandex.ru/2.1/?apikey=ВАШ_API_КЛЮЧ&lang=ru_RU" type="text/javascript"></script>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">TimSeeds</a>
+
+        <nav class="nav">
+            <a href="catalog.html" class="nav-link">Каталог</a>
+            <a href="#advantages" class="nav-link">Преимущества</a>
+            <a href="#reviews" class="nav-link">Отзывы</a>
+            <a href="#contacts" class="nav-link">Контакты</a>
+
+            <button id="cartButton" class="cart-button" aria-label="К��рзина">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+            </button>
+        </nav>
+
+        <div id="cartModal" class="cart-modal hidden">
+            <div class="cart-header">
+                <h2>Корзина</h2>
+                <button id="closeCart" class="close-button" aria-label="Закрыть корзину">✕</button>
+            </div>
+            <div class="cart-content">
+                <p class="cart-empty">Корзина пуста</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    TimSeeds —<br>
+                    Семена для вашего<br>
+                    сада и огорода
+                </h1>
+                <p class="hero-text">
+                    Откройте для себя широкий ассортимент качественных семян от популярных до редких сортов для вашего сада и огорода. Поднимите ваше садоводство на новый уровень с TimSeeds.
+                </p>
+            </div>
+            <div class="hero-image">
+                <img src="img/image.png" alt="#">
+            </div>
+        </section>
+
+        <section id="products" class="products">
+            <h2 class="products-title">Ваш надежный выбор семян!</h2>
+            <p class="products-subtitle">Качественные семена для дома и фермы</p>
+        
+            <div class="product-cards">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="img/томатик.jpg" alt="томатик">
+                    </div>
+                    <h3 class="product-name">Томат Черри</h3>
+                    <p class="product-description">Спелые и свежие</p>
+                    <div class="product-price">
+                        <span class="price">70₽</span>
+                    </div>
+                    <button class="order-button">Купить</button>
+                </div>
+        
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="img/марковочка1.jpg" alt="Морковь Нантская">
+                    </div>
+                    <h3 class="product-name">Морковь Нантская</h3>
+                    <p class="product-description">Сладкая и сочная</p>
+                    <div class="product-price">
+                        <span class="price-new">₽100</span>
+                    </div>
+                    <button class="order-button">Купить</button>
+                </div>
+        
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="img/базилик.jpg" alt="Базилик Фиолетовый">
+                    </div>
+                    <h3 class="product-name">Базилик Фиолетовый</h3>
+                    <p class="product-description">Ароматная трава для блюд</p>
+                    <div class="product-price">
+                        <span class="price-new">₽80</span>
+                    </div>
+                    <button class="order-button">Купить</button>
+                </div>
+            </div>
+            <div class="catalog-link-container">
+                <a href="catalog.html" class="catalog-link-button">
+                    Перейти в каталог
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </section>
+
+        <section id="reviews" class="testimonials">
+            <h2>Отзывы наших клиентов</h2>
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <img src="/img/review1.jpg" alt="Фото пользователя" class="user-photo" id="testimonialImage">
+                    <p class="review-text" id="testimonialText">Купил семена в TimSeeds и остался очень доволен!
+                        Отличный выбор и качество, всё прорастает быстро и без проблем.</p>
+                    <p class="user-info" id="testimonialAuthor">Роман Морозилкин, секретарь</p>
+                </div>
+                <div class="navigation-arrows">
+                    <button class="arrow-left" aria-label="Предыдущий отзыв">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="arrow-right" aria-label="Следующий отзыв">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="advantages" class="advantages">
+            <h2>Наши преимущества</h2>
+            <div class="advantages-grid">
+                <div class="advantage-item">
+                    <i class="fas fa-seedling"></i>
+                    <h3>Качественные семена</h3>
+                    <p>Только проверенные поставщики и высокая всхожесть</p>
+                </div>
+                <div class="advantage-item">
+                    <i class="fas fa-truck"></i>
+                    <h3>Быстрая доставка</h3>
+                    <p>Доставляем по всей России в кратчайшие сроки</p>
+                </div>
+                <div class="advantage-item">
+                    <i class="fas fa-medal"></i>
+                    <h3>Гарантия качества</h3>
+                    <p>100% гарантия на все товары</p>
+                </div>
+                <div class="advantage-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <h3>Поддержка</h3>
+                    <p>Консультации специалистов 24/7</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacts" class="contacts">
+            <div class="map-container">
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Adcd8ee2beaa4e41880ccf26caa6a65d345d95c342de4dde80a1eab1a1af31ec9&amp;source=constructor" width="1280" height="720" frameborder="0"></iframe>
+                </iframe>
+                <div class="contact-info">
+                    <h2>Контакты</h2>
+                    <a href="tel:+79876543210" class="contact-phone">+7 880 222-04-02</a>
+                    <a href="mailto:info@constructor.ru" class="contact-email">info@rgau-msha.ru</a>
+                    <p class="contact-address">г. Москва, метро "Петровско-Разумовская",<br>ул. Лиственничная аллея, дом 2а</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h3>TimSeeds</h3>
+            </div>
+
+            <div class="footer-links">
+                <a href="catalog.html">Каталог</a>
+                <a href="#advantages">Преимущества</a>
+                <a href="#reviews">Отзывы</a>
+            </div>
+
+            <div class="footer-contacts">
+                <a href="tel:+78802220402" class="footer-phone">+7 880 222-04-02</a>
+                <a href="mailto:info@rgau-msha.ru" class="footer-email">info@rgau-msha.ru</a>
+            </div>
+
+            <div class="social-icons">
+                <a href="https://www.timacad.ru/"target="_blank" class="social-icon" aria-label="WhatsApp" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://www.timacad.ru/"target="_blank" class="social-icon" aria-label="Telegram" target="_blank">
+                    <i class="fab fa-telegram"></i>
+                </a>
+                <a href="https://www.timacad.ru/"target="_blank" class="social-icon" aria-label="VK" target="_blank">
+                    <i class="fab fa-vk"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    
+
+    <button class="scroll-to-top" aria-label="Вернуться наверх">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <script src="script.js"></script>
+    
+</body>
+
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог - TimSeeds</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="catalog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">TimSeeds</a>
+
+        <nav class="nav">
+            <a href="catalog.html" class="nav-link">Каталог</a>
+            <a href="index.html#advantages" class="nav-link">Преимущества</a>
+            <a href="index.html#reviews" class="nav-link">Отзывы</a>
+            <a href="index.html#contacts" class="nav-link">Контакты</a>
+
+            <button id="cartButton" class="cart-button" aria-label="Корзина">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+            </button>
+        </nav>
+
+        <div id="cartModal" class="cart-modal hidden">
+            <div class="cart-header">
+                <h2>Корзина</h2>
+                <button id="closeCart" class="close-button" aria-label="Закрыть корзину">✕</button>
+            </div>
+            <div class="cart-content">
+                <p class="cart-empty">Корзина пуста</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="catalog-main">
+        <div class="collection-header">
+            <h1>Новое поступление!</h1>
+            <p class="collection-subtitle">Подготовься к сезону с нашей новой коллекцией семян!
+            </p>
+        </div>
+
+        <div class="product-grid">
+            <!-- Продукт 1 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="img/1.jpg" alt="#">
+                </div>
+                <h3 class="product-title">Щавель "Пикми"</h3>
+                <p class="product-description">Описание товара</p>
+                <div class="product-price">
+                    <span class="price">40₽</span>
+                </div>
+                <button class="order-button">Купить</button>
+            </div>
+
+            <!-- Продукт 2 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-badge">%</span>
+                    <img src="img/2.jpg" alt="#">
+                </div>
+                <h3 class="product-title">Баклажан "Черный"</h3>
+                <p class="product-description">Описание товара</p>
+                <div class="product-price">
+                    <span class="price-new">30₽</span>
+                    <span class="price-old">50₽</span>
+                </div>
+                <button class="order-button">Купить</button>
+            </div>
+
+            <!-- Продукт 3 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="img/3.jpg" alt="#">
+                </div>
+                <h3 class="product-title">Персик "Зрелый"</h3>
+                <p class="product-description">Описание товара</p>
+                <div class="product-price">
+                    <span class="price">35₽</span>
+                </div>
+                <button class="order-button">Купить</button>
+            </div>
+        </div>
+        <div class="product-grid">
+            <!-- Первый ряд (повторите этот блок 4 раза) -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="img/4.jpg" alt="#">
+                </div>
+                <h3 class="product-title">Щавель "Отборный"</h3>
+                <p class="product-description">Описа��ие товара</p>
+                <div class="product-price">
+                    <span class="price">60₽</span>
+                </div>
+                <button class="order-button">Купить</button>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-badge">%</span>
+                    <img src="img/5.jpg" alt="Бежевая кожаная сумка">
+                </div>
+                <h3 class="product-title">Кукуруза "Интересная"</h3>
+                <p class="product-description">Описание товара</p>
+                <div class="product-price">
+                    <span class="price-new">45₽</span>
+                    <span class="price-old">70₽</span>
+                </div>
+                <button class="order-button">Купить</button>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="img/6.jpg" alt="Зеленая кожаная сумка">
+                </div>
+                <h3 class="product-title">Капуста "Скромная"</h3>
+                <p class="product-description">Описание товар��</p>
+                <div class="product-price">
+                    <span class="price">20₽</span>
+                </div>
+                <button class="order-button">Купить</button>
+            </div>
+        </div>
+        <div class="product-grid">
+            <!-- Первый ряд (повторите этот блок 4 раза) -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="img/7.jpg" alt="Синяя кожаная сумка">
+                </div>
+                <h3 class="product-title">Петрушка "Зеленая"</h3>
+                <p class="product-description">Описа��ие товара</p>
+                <div class="product-price">
+                    <span class="price">24₽</span>
+                </div>
+                <button class="order-button">Купить</button>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-badge">%</span>
+                    <img src="img/8.jpg" alt="Бежевая кожаная сумка">
+                </div>
+                <h3 class="product-title">Редис "Денис"</h3>
+                <p class="product-description">Описание товара</p>
+                <div class="product-price">
+                    <span class="price-new">75₽</span>
+                    <span class="price-old">90₽</span>
+                </div>
+                <button class="order-button">Купить</button>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="img/9.jpg" alt="Зеленая кожаная сумка">
+                </div>
+                <h3 class="product-title">Помидор "Роман"</h3>
+                <p class="product-description">Описание товар��</p>
+                <div class="product-price">
+                    <span class="price">55₽</span>
+                </div>
+                <button class="order-button">Купить</button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Корзина
+        const cartButton = document.getElementById('cartButton');
+        const cartModal = document.getElementById('cartModal');
+        const closeCart = document.getElementById('closeCart');
+
+        cartButton.addEventListener('click', () => {
+            cartModal.classList.remove('hidden');
+            setTimeout(() => {
+                cartModal.classList.add('active');
+            }, 10);
+        });
+
+        closeCart.addEventListener('click', () => {
+            cartModal.classList.remove('active');
+            setTimeout(() => {
+                cartModal.classList.add('hidden');
+            }, 300);
+        });
+
+        // Закрытие корзины при клике вне её
+        document.addEventListener('click', (e) => {
+            if (!cartModal.contains(e.target) && !cartButton.contains(e.target) && cartModal.classList.contains('active')) {
+                cartModal.classList.remove('active');
+                setTimeout(() => {
+                    cartModal.classList.add('hidden');
+                }, 300);
+            }
+        });
+    </script>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h3>TimSeeds</h3>
+            </div>
+
+            <div class="footer-links">
+                <a href="catalog.html">Каталог</a>
+                <a href="index.html#advantages">Преимущества</a>
+                <a href="index.html#reviews">Отзывы</a>
+            </div>
+
+            <div class="footer-contacts">
+                <a href="tel:+78802220402" class="footer-phone">+7 880 222-04-02</a>
+                <a href="mailto:info@rgau-msha.ru" class="footer-email">info@rgau-msha.ru</a>
+            </div>
+
+            <div class="social-icons">
+                <a href="https://www.timacad.ru/" target="_blank" class="social-icon" aria-label="WhatsApp"
+                    target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://www.timacad.ru/" target="_blank" class="social-icon" aria-label="Telegram"
+                    target="_blank">
+                    <i class="fab fa-telegram"></i>
+                </a>
+                <a href="https://www.timacad.ru/" target="_blank" class="social-icon" aria-label="VK" target="_blank">
+                    <i class="fab fa-vk"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <button class="scroll-to-top" aria-label="Вернуться наверх">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <button class="back-button" aria-label="Назад на главную страницу">
+        <i class="fas fa-arrow-left"></i> Назад
+    </button>
+    <script src="script.js"></script>
+</body>
+
+</body>
+
+</html>
